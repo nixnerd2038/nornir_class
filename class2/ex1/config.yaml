@@ -1,0 +1,2 @@
+core:
+  num_workers: 15

@@ -1,0 +1,5 @@
+ios:
+  platform: cisco_ios
+  username: pyclass
+  password: cisco123
+  port: 22

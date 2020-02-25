@@ -1,0 +1,65 @@
+2020-02-24 21:26:54,512 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-02-24 21:26:54,514 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "ex5.py", line 6, in my_task
+    print(f"DNS1: {host['dns1']}")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'dns1'
+
+2020-02-24 21:26:54,515 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "ex5.py", line 6, in my_task
+    print(f"DNS1: {host['dns1']}")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'dns1'
+
+2020-02-24 21:29:50,464 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-02-24 21:29:50,465 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "ex5.py", line 6, in my_task
+    print(f"DNS1: {host['dns1']}")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'dns1'
+
+2020-02-24 21:29:50,465 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "ex5.py", line 6, in my_task
+    print(f"DNS1: {host['dns1']}")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'dns1'
+
+2020-02-24 21:30:38,895 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-02-24 21:30:38,897 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "ex5.py", line 7, in my_task
+    print(f"DNS2: {host['dns2']}")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'dns2'
+
+2020-02-24 21:30:38,897 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "ex5.py", line 6, in my_task
+    print(f"DNS1: {host['dns1']}")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'dns1'
+
+2020-02-24 21:31:18,154 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-02-25 07:17:41,694 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
