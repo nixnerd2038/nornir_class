@@ -1,0 +1,16 @@
+1. Create a simple inventory that contains just a hosts.yaml file. In this hosts.yaml file add just one device entry. Additionally, for the device entry device just one field 'hostname: localhost'.
+Using the Python interpreter shell and the hosts.yaml file that you just created:
+    a. Create a Nornir object using InitNornir
+    b. Look at nr.inventory
+    c. Look at nr.inventory.hosts
+    d. Look at nr.inventory.hosts['name'] where 'name' is the name of the entry you created in hosts.yaml.
+    e. Look at nr.inventory.hosts['name'].hostname
+ 
+``` >>> from nornir import InitNornir
+    >>> nr = InitNornir()
+    >>> nr.inventory.hosts
+    {'localhost': Host: localhost}
+    >>> nr.inventory.hosts['localhost']
+    Host: localhost
+    >>> nr.inventory.hosts['localhost'].hostname
+    'localhost'```
