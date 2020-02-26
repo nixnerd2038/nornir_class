@@ -1,0 +1,26 @@
+cisco3:
+  hostname: cisco3.lasthop.io
+  groups:
+    - ios
+  data:
+    dns1: 8.8.8.8
+cisco4:
+  hostname: cisco4.lasthop.io
+  groups:
+    - ios
+arista1:
+  hostname: arista1.lasthop.io
+  groups:
+    - eos
+arista2:
+  hostname: arista2.lasthop.io
+  groups:
+    - eos
+arista3:
+  hostname: arista3.lasthop.io
+  groups:
+    - eos
+arista4:
+  hostname: arista4.lasthop.io
+  groups:
+    - eos

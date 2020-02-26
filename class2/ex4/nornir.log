@@ -1,0 +1,724 @@
+2020-02-25 14:28:55,983 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:28:55,987 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2020-02-25 14:28:55,988 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:28:55,989 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2020-02-25 14:28:55,990 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:28:55,992 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:28:55,993 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:29:24,939 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:29:24,942 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2020-02-25 14:29:24,943 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2020-02-25 14:29:24,944 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:29:24,946 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:29:24,947 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:29:24,949 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:29:55,114 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:29:55,117 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2020-02-25 14:29:55,118 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2020-02-25 14:29:55,120 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:29:55,121 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:29:55,122 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:29:55,124 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_eos". Is the library installed?
+
+2020-02-25 14:40:14,700 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:40:15,079 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 436, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib64/python3.6/http/client.py", line 1257, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 1423, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib64/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib64/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 164, in open
+    self.device.run_commands(["show clock"], encoding="text")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 479, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 169, in open
+    raise ConnectionException(py23_compat.text_type(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+2020-02-25 14:40:15,081 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 436, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib64/python3.6/http/client.py", line 1257, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 1423, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib64/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib64/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 164, in open
+    self.device.run_commands(["show clock"], encoding="text")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 479, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 169, in open
+    raise ConnectionException(py23_compat.text_type(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+2020-02-25 14:40:15,087 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 436, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib64/python3.6/http/client.py", line 1257, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 1423, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib64/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib64/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 164, in open
+    self.device.run_commands(["show clock"], encoding="text")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 479, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 169, in open
+    raise ConnectionException(py23_compat.text_type(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+2020-02-25 14:40:15,173 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 436, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib64/python3.6/http/client.py", line 1257, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 1423, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib64/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib64/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 164, in open
+    self.device.run_commands(["show clock"], encoding="text")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 479, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 169, in open
+    raise ConnectionException(py23_compat.text_type(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+2020-02-25 14:43:34,181 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:43:34,649 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 436, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib64/python3.6/http/client.py", line 1257, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 1423, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib64/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib64/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 164, in open
+    self.device.run_commands(["show clock"], encoding="text")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 479, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 169, in open
+    raise ConnectionException(py23_compat.text_type(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+2020-02-25 14:43:34,650 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 436, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib64/python3.6/http/client.py", line 1257, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 1423, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib64/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib64/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 164, in open
+    self.device.run_commands(["show clock"], encoding="text")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 479, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 169, in open
+    raise ConnectionException(py23_compat.text_type(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+2020-02-25 14:43:34,651 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 436, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib64/python3.6/http/client.py", line 1257, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 1423, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib64/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib64/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 164, in open
+    self.device.run_commands(["show clock"], encoding="text")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 479, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 169, in open
+    raise ConnectionException(py23_compat.text_type(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+2020-02-25 14:43:34,654 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 436, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib64/python3.6/http/client.py", line 1257, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 1423, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib64/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib64/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib64/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 164, in open
+    self.device.run_commands(["show clock"], encoding="text")
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/pyeapi/eapilib.py", line 479, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/napalm/eos/eos.py", line 169, in open
+    raise ConnectionException(py23_compat.text_type(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:852)
+
+2020-02-25 14:45:25,401 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:48:57,797 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:49:25,030 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:50:02,688 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:55:37,807 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 14:56:27,923 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 15:05:54,385 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 15:06:15,489 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 15:07:30,498 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 15:08:10,319 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 15:11:53,452 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 18:38:59,284 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 18:40:47,909 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 18:41:37,996 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2020-02-25 18:42:10,966 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
