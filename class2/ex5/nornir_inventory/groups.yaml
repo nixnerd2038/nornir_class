@@ -1,0 +1,6 @@
+ios:
+  platform: ios
+  port: 22
+eos:
+  platform: eos
+  port: 443
