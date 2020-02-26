@@ -1,0 +1,188 @@
+2020-02-25 12:23:14,172 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | include hostname'} on 2 hosts
+2020-02-25 12:23:14,384 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-02-25 12:23:14,571 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-02-25 12:25:24,277 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | include hostname'} on 2 hosts
+2020-02-25 12:25:24,723 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-02-25 12:25:24,725 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2020-02-25 12:28:10,786 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | include hostname'} on 2 hosts
+2020-02-25 12:31:47,966 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | include hostname'} on 2 hosts
+2020-02-25 12:35:41,583 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | include hostname'} on 2 hosts
+2020-02-25 12:35:45,316 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 324, in _open
+    self._try_session_preparation()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 747, in _try_session_preparation
+    self.session_preparation()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/cisco/cisco_ios.py", line 16, in session_preparation
+    self.set_base_prompt()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 1070, in set_base_prompt
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 1085, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 427, in write_channel
+    self._write_channel(out_data)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 385, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+2020-02-25 12:35:45,504 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 324, in _open
+    self._try_session_preparation()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 747, in _try_session_preparation
+    self.session_preparation()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/cisco/cisco_ios.py", line 16, in session_preparation
+    self.set_base_prompt()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 1070, in set_base_prompt
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 1085, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 427, in write_channel
+    self._write_channel(out_data)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 385, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+2020-02-25 12:41:04,036 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | include hostname'} on 2 hosts
+2020-02-25 12:41:37,860 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | include hostname'} on 2 hosts
+2020-02-25 12:42:59,316 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | include hostname'} on 2 hosts

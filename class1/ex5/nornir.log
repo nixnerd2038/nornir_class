@@ -63,3 +63,12 @@ KeyError: 'dns1'
 
 2020-02-24 21:31:18,154 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
 2020-02-25 07:17:41,694 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-02-25 15:26:38,907 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-02-25 15:26:42,426 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-02-25 15:26:44,666 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-02-25 15:26:46,879 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-02-25 15:27:20,607 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 4 hosts
+2020-02-25 15:27:40,179 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 4 hosts
+2020-02-25 15:27:44,909 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 4 hosts
+2020-02-25 15:27:46,834 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 4 hosts
+2020-02-25 15:27:48,904 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 4 hosts

@@ -8,4 +8,4 @@ def my_task(task):
 
 if __name__ == "__main__":
     nr = InitNornir()
-    nr.run(task=my_task)
+    nr.run(task=my_task) # is this recursive...?

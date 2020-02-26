@@ -1,0 +1,6 @@
+ios:
+  platform: cisco_ios
+  port: 22
+eos:
+  platform: arista_eos
+  port: 22
