@@ -72,6 +72,9 @@ def exercise_5c():
                 on_failed=True
             )
             print_result(result)
+            print()
+            print(f"Global failed hosts: {nr.data.failed_hosts}")
+            print()
 
 def exercise_5d():
     """Get int br with bad password
