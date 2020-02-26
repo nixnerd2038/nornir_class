@@ -38,7 +38,7 @@ def exercise_5b():
     print(result.failed_hosts)
     print(nr.data.failed_hosts)
 
-def exercise_5cd():
+def exercise_5c():
     """Get int br with bad password
          takeaways: handling failures
     """
@@ -73,13 +73,54 @@ def exercise_5cd():
             )
             print_result(result)
 
+def exercise_5d():
+    """Get int br with bad password
+         takeaways: handling failures with recovery
+    """
+    ios_filt = F(groups__contains="ios")
+    nr = InitNornir(config_file="config.yaml")
+    nr.inventory.hosts["cisco3"].password = 'bogus'
+    nr = nr.filter(ios_filt)
+    cmd = "show ip interface brief"
+    result = nr.run(
+        task=netmiko_send_command,
+        command_string=cmd
+    )
+    print_result(result)
+
+    failed_hosts = result.failed_hosts
+    if failed_hosts:
+        for host, obj in failed_hosts.items():
+            try:
+                # Remove failed host from the Nornir connection table
+                nr.inventory.hosts[host].close_connections()
+            except ValueError:
+                pass
+            print(f"{host} : {obj.result}")
+            print()
+            print(f"Trying again...")
+            print()
+            nr.inventory.hosts[host].password = os.getenv("NORNIR_PASSWORD")
+            result = nr.run(
+                task=netmiko_send_command,
+                command_string=cmd,
+                on_failed=True
+            )
+            print_result(result)
+            print()
+            print("Recovering...")
+            print()
+            nr.data.recover_host(host)
+            print(f"Global failed hosts: {nr.data.failed_hosts}")
+            print()
 
             
 
 def main():
     exercise_5a()
     exercise_5b()
-    exercise_5cd()
+    exercise_5c()
+    exercise_5d()
 
 if __name__=="__main__":
     main()
