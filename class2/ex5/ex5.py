@@ -69,7 +69,8 @@ def exercise_5c():
             result = nr.run(
                 task=netmiko_send_command,
                 command_string=cmd,
-                on_failed=True
+                on_failed=True,
+                on_good=False
             )
             print_result(result)
             print()
@@ -107,7 +108,8 @@ def exercise_5d():
             result = nr.run(
                 task=netmiko_send_command,
                 command_string=cmd,
-                on_failed=True
+                on_failed=True,
+                on_good=False
             )
             print_result(result)
             print()

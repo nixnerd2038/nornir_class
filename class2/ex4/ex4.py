@@ -8,10 +8,6 @@ from nornir.plugins.functions.text import print_result
 DEFAULT_GATEWAY = ("10.220.88.1")
 
 def ex4():
-    """Using NAPALM to get the arp table
-        takeaways: NAPALM, using structured data as output and logic, storing 
-        output in a list and re-referencing
-    """
     ios_filt = F(groups__contains="ios")
     eos_filt = F(groups__contains="eos")
     nr = InitNornir(config_file="config.yaml")
@@ -26,11 +22,11 @@ def ex4():
         output = dd[0].result["arp_table"]
         desired = ""
         for entry in output:
+            import ipdb; ipdb.set_trace()
             if DEFAULT_GATEWAY == entry['ip']:
-                desired = entry
-                break # stop checking, we found it
-        parsed_results.append((host, desired)) # append as tuple for easier printing, 
-                                               # would want to store as dict if further processing maybe
+                desired = output
+                break
+        parsed_results.append((host, desired))
 
     for host, res in parsed_results:
         print('--')

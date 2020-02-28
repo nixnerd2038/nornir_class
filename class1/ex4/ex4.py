@@ -3,6 +3,7 @@
 from nornir import InitNornir
 
 def my_task(task):
+    import ipdb; ipdb.set_trace()
     print(task.host.hostname)
     print('---')
 
