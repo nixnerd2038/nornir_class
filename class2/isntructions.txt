@@ -40,6 +40,7 @@ Host: arista1, Gateway: 10.220.88.1 N/A 0062.ec29.70fe Vlan1, Ethernet1
 Host: arista2, Gateway: 10.220.88.1 N/A 0062.ec29.70fe Vlan1, Ethernet1
 Host: arista3, Gateway: 10.220.88.1 N/A 0062.ec29.70fe Vlan1, Ethernet1
 Host: arista4, Gateway: 10.220.88.1 N/A 0062.ec29.70fe Vlan1, Ethernet1
+
 Exercise4
 4. Using a NAPALM getter instead of Netmiko, capture the ARP table output from all of the EOS and IOS devices. The NAPALM "arp_table" getter will return a list of dictionaries. In this list of dictionaries each inner-dictionary will correspond to one entry in the ARP table.
 Post-process the data retrieved from this NAPALM getter and print out the "host" name (for example, "cisco3", "cisco4") and the NAPALM inner dictionary corresponding to the MAC address of the default gateway. For both exercise3 and exercise4, you can just hard-code the gateway value into your code. In other words, you do not need to dynamically determine the default gateway.

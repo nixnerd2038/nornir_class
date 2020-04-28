@@ -25,11 +25,19 @@ def exercise_3c():
     for i, host in enumerate(wrc_hosts.inventory.hosts):
         print(f"WRC Host {i+1}: {host}")
 
+def exercise_3d():
+    nr = InitNornir(config_file="config.yaml")
+    wrc_filter = F(role__contains="WAN")&~F(site_details__wifi_password__contains="racecar")
+    wrc_hosts = nr.filter(wrc_filter)
+    for i, host in enumerate(wrc_hosts.inventory.hosts):
+        print(f"WRC ~Host {i+1}: {host}")
+
 
 def main():
     exercise_3a()
     exercise_3b()
     exercise_3c()
+    exercise_3d()
 
 if __name__=="__main__":
     main()

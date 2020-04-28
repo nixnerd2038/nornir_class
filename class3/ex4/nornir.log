@@ -1,0 +1,683 @@
+2020-04-25 14:01:23,672 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status'} on 6 hosts
+2020-04-25 14:01:23,824 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:01:23,825 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:01:23,829 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:01:23,833 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:02:45,396 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status'} on 4 hosts
+2020-04-25 14:02:45,524 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:02:45,529 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:02:45,539 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:02:45,545 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:05:56,156 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status'} on 4 hosts
+2020-04-25 14:05:56,280 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:05:56,286 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:05:56,289 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:05:56,302 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:08:21,294 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-25 14:08:21,431 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:08:21,434 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:08:21,441 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:08:21,443 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 318, in __init__
+    self._open()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/netmiko/base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+2020-04-25 14:10:22,585 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-25 14:10:55,212 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-25 14:11:21,491 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-25 14:13:35,489 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-25 14:14:05,799 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:05:34,330 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:06:00,190 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:06:17,948 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:07:52,020 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:08:30,730 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:16:17,774 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:16:49,308 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:18:40,435 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:20:17,547 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:20:34,584 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:22:06,879 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:22:40,081 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:23:09,070 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:23:47,919 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:31:57,307 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:32:20,005 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:32:38,259 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts
+2020-04-27 19:32:58,658 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show int status', 'use_textfsm': True} on 4 hosts

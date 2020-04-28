@@ -1,0 +1,69 @@
+2020-04-28 13:13:50,042 -  nornir.core -  WARNING -        run() - Task 'napalm_get' has not been run – 0 hosts selected
+2020-04-28 13:14:23,462 -  nornir.core -  WARNING -        run() - Task 'napalm_get' has not been run – 0 hosts selected
+2020-04-28 13:15:01,912 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {} on 2 hosts
+2020-04-28 13:15:01,914 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2020-04-28 13:15:01,915 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2020-04-28 13:15:20,523 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'show run'} on 2 hosts
+2020-04-28 13:15:25,605 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_show run'
+
+2020-04-28 13:15:25,657 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_show run'
+
+2020-04-28 13:16:18,822 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'running_config'} on 2 hosts
+2020-04-28 13:16:24,032 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_running_config'
+
+2020-04-28 13:16:24,043 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/jamehall/VENV/py3_venv/lib64/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_running_config'
+
+2020-04-28 13:17:09,731 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'config'} on 2 hosts
+2020-04-28 13:19:00,697 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'config', 'retrieve': 'running'} on 2 hosts
+2020-04-28 13:23:42,733 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'config', 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 13:25:26,241 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 13:25:32,544 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 13:37:51,244 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 13:37:53,302 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 14:10:04,881 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 14:10:06,731 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 14:10:44,236 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 14:11:05,789 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 14:12:36,305 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 14:13:19,807 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 14:15:19,761 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 14:15:54,369 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2020-04-28 14:16:51,544 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2020-04-28 14:35:18,786 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2020-04-28 14:39:37,878 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2020-04-28 14:40:00,173 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2020-04-28 14:44:27,496 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts

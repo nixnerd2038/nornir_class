@@ -1,0 +1,17 @@
+ios:
+  platform: ios
+  port: 22
+
+eos:
+  platform: eos
+  port: 22
+
+nxos:
+  connection_options:
+    netmiko:
+      platform: cisco_nxos
+      extras:
+        global_delay_factor: 5
+    napalm:
+      platform: nxos
+      port: 8443
